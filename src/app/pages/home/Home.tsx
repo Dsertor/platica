@@ -2,7 +2,7 @@ import { JSX } from "react";
 import style from "./home.module.css";
 import { Item } from "./components/item/Item";
 
-const nameSections = ["Strings", "calculator"];
+const nameSections = ["Strings", "calculator", 'CRUD'];
 
 export const Home = (): JSX.Element => {
     return (
