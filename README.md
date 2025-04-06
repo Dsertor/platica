@@ -8,4 +8,8 @@ Pueden hacer lo que quieran...
 # platica
 
 Hecho desde el github
+<<<<<<< HEAD
  sd
+=======
+Hecho desde nueva rama
+>>>>>>> nueva-rama
