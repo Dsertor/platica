@@ -1,5 +1,7 @@
 import { ChangeEvent, JSX, useEffect, useState } from "react";
 
+import style from './findElementInString.module.css';
+
 export const FindElementInString = (): JSX.Element => {
     const [value, setValue] = useState<string>("");
     const [position, setPosition] = useState<number>(0);
@@ -15,9 +17,9 @@ export const FindElementInString = (): JSX.Element => {
 
     useEffect(() => {
         if(value !== '' && position >= 1 && position <= (value.length -1)){
-            setResult(value.charAt(position -1))
+            setResult(`Posición en ${position}: ${value.charAt(position -1)}`)
         }else{
-            setResult('')
+            setResult('Valor no válido')
         }
 
 
@@ -25,10 +27,10 @@ export const FindElementInString = (): JSX.Element => {
 
 
     return (
-        <section>
-            <input type="text" name="word" id="word" onChange={(event) => onChangeValue(event)} />
-            <input type="number" name="position" id="position" onChange={(event) => takeLetterByPosition(event)}/>
-            <p>{result}</p>
+        <section className={`${style.inputContainer} `}>
+            <input type="text" name="word" id="word" onChange={(event) => onChangeValue(event)} className={`${style.wordInput} `}/>
+            <input type="number" name="position" id="position" onChange={(event) => takeLetterByPosition(event)} className={`${style.worldPosition} `}/>
+            <p className={`${style.resultBox} `}>{result}</p>
         </section>
     );
 };
