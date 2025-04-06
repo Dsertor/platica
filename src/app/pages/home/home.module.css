@@ -1,0 +1,13 @@
+
+
+.title{
+    text-align: center;
+    padding: 1rem;
+}
+
+.sections{
+    flex: 1;
+    display: flex;
+    padding: 0 1.25rem;
+    gap: 1rem;
+}
