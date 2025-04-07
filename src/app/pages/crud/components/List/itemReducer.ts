@@ -12,9 +12,6 @@ export const itemReducer = (state: item[], action: actions): item[] =>{
         case 'addItem':
             return [...state, {id: action.payload.id, name: action.payload.name}]
 
-
-
-
         case 'deleteItem':
             return state.filter(item => item.name !== action.payload.name)
 
