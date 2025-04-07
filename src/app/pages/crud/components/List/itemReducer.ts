@@ -1,41 +1,21 @@
-import { item } from "./List";
+import { itemList } from "./List";
 
-
-type actions = {
+type actionType = {
     type: string,
-    payload: item
+    payload: itemList
 }
 
-export const itemReducer = (state: item[], action: actions): item[] =>{
+
+export const itemReducer = (currentState: itemList[], action: actionType) =>{
     switch(action.type){
-
         case 'addItem':
-            return [...state, {id: action.payload.id, name: action.payload.name}]
-
-
-
-
-        case 'deleteItem':
-            return state.filter(item => item.name !== action.payload.name)
-
-
-
-
-
-
-
-
-
-
-
-
-
+            return [...currentState, {id: action.payload.id, name: action.payload.name}]
 
 
 
 
 
         default:
-            return state;
+            return currentState;
     }
 }
