@@ -5,6 +5,8 @@ import { FindElementInString } from "../pages/stringPage/components/findElementI
 import { SelectButtonInfo } from "../shared/components/SelectButtonInfo/SelectButtonInfo";
 import { Crud } from "../pages/crud/Crud";
 import { List } from "../pages/crud/components/List/List";
+import { RenderPage } from "../pages/render/RenderPage";
+import { UseMemo } from "../pages/render/components/UseMemo";
 
 export const AppRoutes = () => {
     return (
@@ -18,6 +20,10 @@ export const AppRoutes = () => {
             <Route path="CRUD" element={<Crud />}>
                 <Route index element={<SelectButtonInfo />}></Route>
                 <Route path="list" element={<List />}></Route>
+            </Route>
+            <Route path="render" element={<RenderPage/>}>
+                <Route index element={<SelectButtonInfo />}></Route>
+                <Route path="useMemo" element={<UseMemo/>}></Route>
             </Route>
         </Routes>
     );
